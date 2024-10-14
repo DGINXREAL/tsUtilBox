@@ -4,13 +4,15 @@ A utility package
 
 ## Installation
 
-bash
+```bash
 npm install tsutilbox
-
+```
 ## Verwendung
 
-typescript
+```typescript
 import { addDOMEventListener } from 'tsutilbox';
+```
+
 // Beispielverwendung
 
 ## Lizenz
