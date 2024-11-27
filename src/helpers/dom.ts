@@ -11,3 +11,8 @@ export const addDOMEventListener = (event: string, selector: string, callback: F
     }
   });
 }
+
+export const copyToClipboard = async (text: string) => {
+  const clipboardItem = new ClipboardItem({'text/plain': new Blob([text], {type:'text/plain'}) })
+  await navigator.clipboard.write([clipboardItem])
+}
