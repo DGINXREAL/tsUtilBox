@@ -17,6 +17,14 @@ export const copyToClipboard = async (text: string) => {
   await navigator.clipboard.write([clipboardItem])
 }
 
+export const getTextFromClipboard = async (): Promise<string> => {
+  try {
+    return await navigator.clipboard.readText();
+  } catch (error) {
+    throw error;
+  }
+}
+
 export const downloadStringAsFile = async (
     content: string,
     filename: string = "output.txt"
